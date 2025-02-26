@@ -1,0 +1,27 @@
+public class Search2DArray {
+    public static void main(String[] args) {
+        String[][] strArr = {{"Pak", "Aus", "Ban"},
+                             {"New", "Eng", "Win"},
+                             {"Ind", "SA", "Afg"}};
+        String search = "Ind"; // Assign the string to search here
+        boolean found = false;
+
+        for (String[] row : strArr) {
+            for (String element : row) {
+                if (element.equals(search)) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) {
+                break;
+            }
+        }
+
+        if (found) {
+            System.out.println("The string \"" + search + "\" was found in the array.");
+        } else {
+            System.out.println("The string \"" + search + "\" was not found in the array.");
+        }
+    }
+}
